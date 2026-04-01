@@ -18,3 +18,5 @@ The machine learning pipeline aggregates raw event data into annual features per
 The goal isn't to replace human analysts. It's to give them a tool that can flag emerging risk earlier and at a scale that manual monitoring can't match. When the model identifies a country whose conflict indicators are trending toward escalation, that's a signal for deeper investigation,not a final verdict.
 
 ## Chart
+![Predicted Risk of Elevated Conflict in the Following Year (2026)](charts/predicted_conflict_risk_2025.png)
+Would you look at that! I mean I know everyone says "its a rough neighborhood" but every single country is wild. Then again, when we check out the dataset it becomes pretty clear. Additionally 2026 has already had every Gulf State involved in some sort of conflict. 

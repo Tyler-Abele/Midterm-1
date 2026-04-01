@@ -6,22 +6,21 @@ This repository contains a fully established secondary dataset built using the r
 - Name: Tyler Abele
 - NetID: xxe9ff
 
-**DOI**
-[![DOI](https://zenodo.org/badge/1189040869.svg)](https://doi.org/10.5281/zenodo.19363064)
+**DOI:** [(https://zenodo.org/badge/1189040869.svg)](https://doi.org/10.5281/zenodo.19363064)
 
 ## Quick Links:
 | **Resource** | **Link** |
 | --- | --- |
 | Press Release | [link](./press-release.md) |
-| Data (OneDrive) | [link](https://myuva-my.sharepoint.com/:f:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201?csf=1&web=1&e=sJZkTj)|
-\ Data (github) \ [link](./data/) |
+| Data (OneDrive) | [link](https://myuva-my.sharepoint.com/:f:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data?csf=1&web=1&e=z0IL0n)|
+| Data (repo) | [link](./data/) |
 | Pipeline Notebook | [link](./pipeline/master_pipeline.ipynb)|
-| Pipeline Markdown | [link](./pipeline.md)|
-| Liscense | [link](./LICENSE.md)|
+| Pipeline Markdown | [link](./pipeline/master_pipeline.md)|
+| Liscense | [link](./LICENSE)|
 
 ### License
 
-This project is Liscened under the MIT Liscense. [link](./LICENSE.md)
+This project is Liscened under the MIT Liscense. [link](./LICENSE)
 
 ## Problem Definition
 
@@ -40,7 +39,7 @@ This project is personally meaningful to me because my father served in Iraq dur
 ## Press Release 
 **Headline** New Conflict Hotspot Tool Could Save Lives in the Middle East.
 
-see the full press release: [press_release.md](./press_release.md)
+see the full press release: [press-release.md](./press-release.md)
 
 ## Domain Expositon
 
@@ -97,12 +96,12 @@ The domain of this project is conflict analysis and early warning within the bro
 All Background reading materials are stored in the [`readings`](./readings/) folder and the UVA OneDrive folder here: [`UVA OneDrive Folder`](https://myuva-my.sharepoint.com/:f:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201?csf=1&web=1&e=sJZkTj).
 
 | **Title** | **Description** | **repo link** | **onedrive link**
-|| --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | ACLED CAST Methodology | background on conflict forecasting methods using event data. | [repo](./readings/ACLED_CAST_Methodology.pdf) |[onedrive](https://myuva-my.sharepoint.com/:b:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/readings/ACLED-CAST-Methodology-%E2%80%93-July-2023.pdf?csf=1&web=1&e=XyV9yL) |
-| FSI Methodology | explanation of how fragility indicators are constructed and interpreted. | [link](./readings/FSI_Methodology.pdf) | [onedrive](https://myuva-my.sharepoint.com/:b:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/readings/FSI-Methodology.pdf?csf=1&web=1&e=6eVYdt) |
-| SIPRI Military Expendature Database |regional background on militarization and security dynamics. | [link](./readings/SIPRI_world_expendature.pdf) | [onedrive](https://myuva-my.sharepoint.com/:b:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/readings/SIPRI_world_expendature.pdf?csf=1&web=1&e=u0Zfvv) |
-| SIPRI Middle East Military Spending and Arms Transfers | current background on defense spending, including the Middle East. | [link](./readings/SIPRI.pdf) | [onedrive](https://myuva-my.sharepoint.com/:b:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/readings/SIPRI.pdf?csf=1&web=1&e=Arv6AS) |
-| World Bank Economic Note on the Middle East Conflict | regional context on the socioeconomic consequences of conflict. | [link](./readings/WorldBank_Palestine.pdf) | [onedrive](https://myuva-my.sharepoint.com/:b:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/readings/WorldBank_Palestine.pdf?csf=1&web=1&e=gkg7vk) |
+| FSI Methodology | explanation of how fragility indicators are constructed and interpreted. | [repo](./readings/FSI_Methodology.pdf) | [onedrive](https://myuva-my.sharepoint.com/:b:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/readings/FSI-Methodology.pdf?csf=1&web=1&e=6eVYdt) |
+| SIPRI Military Expendature Database |regional background on militarization and security dynamics. | [repo](./readings/SIPRI_world_expendature.pdf) | [onedrive](https://myuva-my.sharepoint.com/:b:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/readings/SIPRI_world_expendature.pdf?csf=1&web=1&e=u0Zfvv) |
+| SIPRI Middle East Military Spending and Arms Transfers | current background on defense spending, including the Middle East. | [repo](./readings/SIPRI.pdf) | [onedrive](https://myuva-my.sharepoint.com/:b:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/readings/SIPRI.pdf?csf=1&web=1&e=Arv6AS) |
+| World Bank Economic Note on the Middle East Conflict | regional context on the socioeconomic consequences of conflict. | [repo](./readings/WorldBank_Palestine.pdf) | [onedrive](https://myuva-my.sharepoint.com/:b:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/readings/WorldBank_Palestine.pdf?csf=1&web=1&e=gkg7vk) |
 
 ## Data Creation
 
@@ -113,10 +112,16 @@ Conflict prediction sits at the intersection of political science, data science,
 ### Code
 
 | File | Description | Link |
-|------|-------------|------|
-| master_pipeline.ipynb | Full end-to-end pipeline for data acquisition, cleaning, and modeling. This works with raw data. | [Link](./pipeline/master_pipeline.ipynb) |
+| ---- | ----------- | --- |
+| raw_data_loading | loads all of the raw data into the duckdb database | [Link](./code/raw_data_loading.ipynb) |
+| dim_country.ipynb | creates the dim country database, has general country data | [Link](./code/dim_country.ipynb) |
+| fact_acled_event.ipynb | holds all of the import acled data | [Link](./code/fact_acled_event.ipynb) |
+| fact_gdelt_event.ipynb | holds all of the imported gdelt data | [Link](./code/fact_gdelt_event.ipynb) |
+| fact_country_year.ipynb | aggregates many of the other raw data tables into a single table that is easy to use for anayltics | [Link](./code/fact_country_year.ipynb) |
+| master_pipeline | **Does everything including raw data loading** | [Link](./pipeline/master_pipeline.ipynb) |
 
-**Note:** for master pipline to run everything, download the raw files from the raw file folder in the onedrive folder and place them all in raw. This is the easiest way to replicate the pipeline.
+
+**Note:** If you are not using the master pipeline, you need to do raw data loading first. If you are using master pipeline then you do not need to do anything else. Note for all of these you must download the raw data files and place them under the data tab. I would do this for you but the file sizes are too big for github.
 
 ### Bias Identification
 
@@ -140,12 +145,12 @@ A major design decision in this project was to simplify the schema around a sing
 
 ### Data Tables
 
-| Table | Description | File (repo) | File (OneDrive) | 
-|-------|-------------|------| ----- |
-| dim_countries | Central lookup table with 15 Middle East countries, ISO/FIPS codes, and World Bank income group | [repo](./data/clean/dim_countries.csv) | [onedrive](https://myuva-my.sharepoint.com/:x:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data/relational/dim_country.csv?d=w1542462b97054f28ac8515cc05c7d848&csf=1&web=1&e=zzGrmi) |
-| fact_acled_events | 144,526 weekly aggregated conflict events from ACLED covering battles, protests, explosions, riots, violence against civilians, and strategic developments across the Middle East (2015–2026) | [repo](./data/clean/fact_acled_events.csv) | [onedrive](https://myuva-my.sharepoint.com/:x:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data/relational/fact_acled_event.csv?d=w581c0339bf0740d3a6bf295fc34c0373&csf=1&web=1&e=znyOUF) |
-| fact_gdelt_events | 2,148,627 media-sourced conflict events from GDELT with Goldstein conflict intensity scores, average article tone, and media mention counts (2023–2025) | [repo](./data/clean/fact_gdelt_events.csv) | [onedrive](https://myuva-my.sharepoint.com/:x:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data/relational/fact_gdelt_event.csv?d=w7a49e72e00944c3881fb40131f0608f4&csf=1&web=1&e=vSkDpY) |
-| fact_country_year | Final modeling table aggregating all sources into one row per country per year with target variable for next-year conflict escalation | [repo](./data/clean/fact_country_year.csv) | [onedrive](https://myuva-my.sharepoint.com/:x:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data/relational/fact_country_year.csv?d=we88acb750686452f99a73b03cd0a9942&csf=1&web=1&e=UhKzCh) |
+| Table | Description | File (OneDrive) | 
+|-------|-------------|------ |
+| dim_countries | Central lookup table with 15 Middle East countries, ISO/FIPS codes, and World Bank income group | [onedrive](https://myuva-my.sharepoint.com/:x:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data/relational/dim_country.csv?d=w1542462b97054f28ac8515cc05c7d848&csf=1&web=1&e=zzGrmi) |
+| fact_acled_events | 144,526 weekly aggregated conflict events from ACLED covering battles, protests, explosions, riots, violence against civilians, and strategic developments across the Middle East (2015–2026) | [onedrive](https://myuva-my.sharepoint.com/:x:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data/relational/fact_acled_event.csv?d=w581c0339bf0740d3a6bf295fc34c0373&csf=1&web=1&e=znyOUF) |
+| fact_gdelt_events | 2,148,627 media-sourced conflict events from GDELT with Goldstein conflict intensity scores, average article tone, and media mention counts (2023–2025) | [onedrive](https://myuva-my.sharepoint.com/:x:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data/relational/fact_gdelt_event.csv?d=w7a49e72e00944c3881fb40131f0608f4&csf=1&web=1&e=vSkDpY) |
+| fact_country_year | Final modeling table aggregating all sources into one row per country per year with target variable for next-year conflict escalation |[onedrive](https://myuva-my.sharepoint.com/:x:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data/relational/fact_country_year.csv?d=we88acb750686452f99a73b03cd0a9942&csf=1&web=1&e=UhKzCh) |
 
 ### Data Dictonary
 
@@ -221,6 +226,39 @@ A major design decision in this project was to simplify the schema around a sing
 | target_conflict_next_year | float | Binary target variable: 1.0 if next year's fatalities exceed current year (escalation), 0.0 otherwise | 1.0 |
 
 ### Data Dictonary of Quantification and Uncertanity
+
+| Table | Feature | Uncertainty | Source of Uncertainty |
+|-------|---------|-------------|----------------------|
+| fact_acled_event | fatalities | ± 20–30% for large events, often underreported | ACLED relies on media and partner reports; remote or censored areas have lower reporting rates; fatality counts are conservative "best estimates" |
+| fact_acled_event | population_exposure | ± 10–25% depending on region | Derived from WorldPop population grids which are modeled estimates, not census counts; conflict zones have the weakest population data |
+| fact_acled_event | centroid_latitude | ± 0.01–0.5° depending on geo-precision | ACLED codes events to nearest identifiable location; rural events may be coded to district or province centroid rather than exact site |
+| fact_acled_event | centroid_longitude | ± 0.01–0.5° depending on geo-precision | Same as latitude; precision varies by event and source availability |
+| fact_gdelt_event | goldsteinscale | ± 1–2 points per event | Score is assigned by CAMEO event code mapping, not human judgment; same real-world event can receive different scores depending on how the source article frames it |
+| fact_gdelt_event | avgtone | ± 2–5 points per event | Computed by automated content analysis of source articles; sensitive to article language, translation quality, and source selection bias |
+| fact_gdelt_event | nummentions | No fixed range; systematically biased upward for countries with heavier English-language media coverage | Countries like Israel and Turkey generate more media mentions per event than Yemen or Bahrain due to media access and international attention |
+| fact_gdelt_event | numscores | Same media coverage bias as nummentions | Source count reflects media ecosystem size, not event severity |
+| fact_country_year | acled_event_count | ± 5–15% depending on country | Underreporting in media-restricted zones (Syria, Yemen) means true event counts are likely higher than recorded |
+| fact_country_year | acled_fatalities_sum | ± 20–40% at annual aggregation | Compounds per-event uncertainty across hundreds of events; countries with active censorship have the widest uncertainty bands |
+| fact_country_year | acled_protest_sum | ± 10–20% | Protests in authoritarian states are underreported due to media suppression and self-censorship by journalists |
+| fact_country_year | gdelt_avg_tone | ± 1–3 points at annual level | Averaging reduces per-event noise but systematic bias remains — countries covered primarily by state media vs international press will have different baseline tones |
+| fact_country_year | gdelt_avg_goldstein | ± 0.5–1.5 points at annual level | Averaging smooths individual coding errors but CAMEO code assignment is deterministic, so systematic miscoding propagates |
+| fact_country_year | gdelt_total_mentions | No fixed range; reflects media coverage volume, not conflict severity | Should be interpreted as a media attention proxy, not a direct conflict measure |
+| fact_country_year | gdelt_total_scores | Same as nummentions | Source count proxy, not ground truth |
+| fact_country_year | military_spending_current_usd | ± 5–15% for most countries; higher for conflict states | SIPRI notes that some countries do not report full military budgets; off-budget spending, corruption, and arms imports may not be captured; exchange rate fluctuations affect USD conversion |
+| fact_country_year | fsi_total_points | ± 3–5 points (methodology-dependent) | Composite of 12 subjective indicators scored by content analysis software and expert review; methodology has been revised multiple times since 2006; year-to-year comparisons should account for scoring methodology changes |
+| fact_country_year | demographic_pressures | ± 0.5–1.0 on 0–10 scale | Expert-coded indicator combining multiple data sources; subjective judgment involved in weighting |
+| fact_country_year | refugees_idps | ± 0.5–1.0 on 0–10 scale | Based on UNHCR data which itself has reporting lags and coverage gaps in active conflict zones |
+| fact_country_year | group_grievances | ± 0.5–1.5 on 0–10 scale | Most subjective FSI indicator; relies heavily on content analysis of media sources which may not capture ground-level communal tensions |
+| fact_country_year | human_flight | ± 0.5–1.0 on 0–10 scale | Emigration data lags by 1–2 years in many countries; undocumented migration not captured |
+| fact_country_year | economic_inequality | ± 0.5–1.0 on 0–10 scale | Gini coefficients and income data are sparse for conflict-affected economies |
+| fact_country_year | economy | ± 0.5–1.0 on 0–10 scale | GDP estimates for conflict states like Syria and Yemen carry significant uncertainty; informal economies not captured |
+| fact_country_year | state_legitimacy | ± 0.5–1.5 on 0–10 scale | Subjective assessment of government legitimacy; media framing affects scoring |
+| fact_country_year | public_services | ± 0.5–1.0 on 0–10 scale | Service delivery data is unreliable in active conflict zones where infrastructure is destroyed |
+| fact_country_year | human_rights | ± 0.5–1.0 on 0–10 scale | Based partly on Freedom House and press freedom indices which have their own methodological debates |
+| fact_country_year | security_apparatus | ± 0.5–1.5 on 0–10 scale | Difficult to assess internal security dynamics from external sources; covert operations and intelligence activity not captured |
+| fact_country_year | factionalized_elites | ± 0.5–1.5 on 0–10 scale | Political fragmentation is inherently difficult to quantify; relies on expert judgment about elite dynamics |
+| fact_country_year | external_intervention | ± 0.5–1.5 on 0–10 scale | Covert foreign intervention (arms smuggling, intelligence support, proxy funding) is by definition underreported |
+| fact_country_year | target_conflict_next_year | Binary, no continuous uncertainty | Derived deterministically from fatality comparison; inherits all uncertainty from the underlying acled_fatalities_sum values |
 
 
 
