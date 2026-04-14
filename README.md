@@ -12,7 +12,7 @@ This repository contains a fully established secondary dataset built using the r
 | **Resource** | **Link** |
 | --- | --- |
 | Press Release | [link](./press-release.md) |
-| Data (OneDrive) | [link](https://myuva-my.sharepoint.com/:f:/r/personal/xxe9ff_virginia_edu/Documents/Midterm%201/data?csf=1&web=1&e=z0IL0n)|
+| Data (OneDrive) | [link](https://myuva-my.sharepoint.com/:f:/g/personal/xxe9ff_virginia_edu/IgDJSQnz8iQIRrmr4j2IUB8sAeYSPlwAUdMYLu0Idl7zoms?e=DfhR5o)|
 | Data (repo) | [link](./data/) |
 | Pipeline Notebook | [link](./pipeline/master_pipeline.ipynb)|
 | Pipeline Markdown | [link](./pipeline/master_pipeline.md)|
